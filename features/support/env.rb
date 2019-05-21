@@ -7,7 +7,7 @@ require 'csv'
 require 'webdrivers'
 
 Capybara.default_max_wait_time = 10
-Capybara.app_host = ENV['host_google']
+Capybara.app_host = ENV['host']
 Capybara.default_selector = :css
 Capybara.ignore_hidden_elements = false
 Webdrivers.cache_time = 86_400
