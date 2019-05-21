@@ -2,11 +2,11 @@ require 'rubygems'
 require 'cucumber'
 require 'cucumber/rake/task'
 
-#@!method init_host_google
-#init google host.
-def init_host_google
-  if ENV['host_google'].equal? nil
-    ENV['host_google'] = 'https://www.google.com'
+#@!method init_host_name
+#init host name, in dummy feature the host is google.
+def init_host_name
+  if ENV['host'].equal? nil
+    ENV['host'] = 'https://www.google.com'
   end
 end
 
