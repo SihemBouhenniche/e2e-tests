@@ -12,6 +12,6 @@ end
 
 desc 'Run google search'
 task :google_search_test  do
-  init_host_google
+  init_host_name
   ruby "-S bundle exec cucumber features/tests/dummy.feature"
 end
