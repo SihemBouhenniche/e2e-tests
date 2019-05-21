@@ -3,10 +3,10 @@
 
 module HostHelpers
 
-  #@!method set_host_google
-  #Set host to google
-  def self.set_host_google
-    Capybara.app_host = ENV['host_google']
+  #@!method set_host
+  #Set host to defined host
+  def self.set_host
+    Capybara.app_host = ENV['host']
   end
 
 end
