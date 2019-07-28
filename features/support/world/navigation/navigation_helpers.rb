@@ -12,5 +12,11 @@ module NavigationHelpers
     google_home_page.load
   end
 
+  def self.load_identification_page
+    HostHelpers.set_host
+    identification_page = IdentificationPage.new
+    identification_page.load
+  end
+
 end
 World(NavigationHelpers)
