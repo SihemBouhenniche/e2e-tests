@@ -2,7 +2,7 @@
 
 
 
-When(/^I click on add skill button$/) do
+  When(/^I click on add skill button$/) do
     IdentificationHelpers.click_add_skill
   end
 
@@ -15,4 +15,8 @@ When(/^I click on add skill button$/) do
 
   Then(/^I can click on add  button$/)do
         IdentificationHelpers.click_add_skill_tolist
+  end
+
+  Then(/^I can add a skill$/)do
+    CvHelpers.set_custom_skill
   end

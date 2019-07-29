@@ -18,3 +18,7 @@ end
 Then(/^I get "(.+)" in search results$/) do |value|
   expect(page).to have_content(value)
 end
+
+Then(/^I can wait "(.+)" seconds$/) do |value|
+  sleep value.to_i
+end

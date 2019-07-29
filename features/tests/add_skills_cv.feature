@@ -8,5 +8,8 @@ Feature: Add_Skills_CV
    When I click on mon compte button
    Then I should see "Mon compte" page
    Then I can add a skill
-   And I can add a skill
-   And I can add a skill
+   And I can wait "2" seconds
+  #  And I can add a skill
+  #  And I can wait "2" seconds
+  #  And I can add a skill
+  # And I can wait "2" seconds
