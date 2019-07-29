@@ -21,3 +21,9 @@ task :add_languages_cv_test  do
   init_host_name
   ruby "-S bundle exec cucumber features/tests/add_languages_cv.feature"
 end
+
+desc 'Run add skill cv test'
+task :add_skill_cv_test  do
+  init_host_name
+  ruby "-S bundle exec cucumber features/tests/add_skills_cv.feature"
+end
