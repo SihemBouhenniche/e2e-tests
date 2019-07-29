@@ -40,6 +40,21 @@ module IdentificationHelpers
     identification_page.add_language_button.click
   end
 
+  #@method click_add_skill
+  #go to mon compte page.
+  def self.click_add_skill
+    identification_page = IdentificationPage.new
+    identification_page.add_skill_button.click
+  end
+
+  #@method click_add_skill
+  #go to mon compte page.
+  def self.click_add_skill_tolist
+    identification_page = IdentificationPage.new
+    identification_page.btn_add_skill.click
+  end
+
+
   #@method fill_language(value)
   #+value+: language to set
   #fill language field with given language and click on enter key.
@@ -48,6 +63,16 @@ module IdentificationHelpers
     identification_page.language_input.set(value)
     identification_page.language_input.send_keys :enter
     identification_page.language_input.send_keys "\n"
+  end
+
+   #@method fill_skill(value)
+  #+value+: skill to set
+  #fill skill field with given skills and click on enter key.
+  def self.fill_skill(value)
+    identification_page = IdentificationPage.new
+    identification_page.skill_input.set(value)
+    identification_page.skill_input.send_keys :enter
+    identification_page.skill_input.send_keys "\n"
   end
 
 end

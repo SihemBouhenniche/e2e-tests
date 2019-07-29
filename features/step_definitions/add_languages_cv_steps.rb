@@ -27,6 +27,7 @@ When /^I click on add button$/ do
 end
 
 Then(/^I can type "(.+)" And "(.+)" And "(.+)" in language field$/) do |value1,value2,value3|
+  
   IdentificationHelpers.fill_language(value1)
   IdentificationHelpers.fill_language(value2)
   IdentificationHelpers.fill_language(value3)
