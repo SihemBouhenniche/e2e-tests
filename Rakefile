@@ -16,8 +16,14 @@ task :google_search_test  do
   ruby "-S bundle exec cucumber features/tests/dummy.feature"
 end
 
-desc 'Run emplotic identification page'
+desc 'Run emploitic add languages test'
 task :add_languages_cv_test  do
   init_host_name
   ruby "-S bundle exec cucumber features/tests/add_languages_cv.feature"
+end
+
+desc 'Run emploitic add skills test'
+task :add_skills_cv_test  do
+  init_host_name
+  ruby "-S bundle exec cucumber features/tests/add_skills_cv.feature"
 end
