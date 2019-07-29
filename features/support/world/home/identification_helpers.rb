@@ -66,5 +66,48 @@ module IdentificationHelpers
     identification_page.skill_input.send_keys :enter
     identification_page.skill_input.send_keys "\n"
   end
+
+
+  #@method click_saved_offers_button
+  #go to mon compte page.
+  def self.click_saved_offers_button
+    identification_page = IdentificationPage.new
+    identification_page.saved_offers_button.click
+  end
+
+  #@method click_offers_button
+  #go to mon compte page.
+  def self.click_offers_button
+    identification_page = IdentificationPage.new
+    identification_page.offers_button.click
+  end
+
+  #@method click_first_offer
+  #go to mon compte page.
+  def self.click_first_offer
+    identification_page = IdentificationPage.new
+    identification_page.first_offer.click
+  end
+
+  #@method click_save_button
+  #go to mon compte page.
+  def self.click_save_button
+    identification_page = IdentificationPage.new
+    identification_page.save_offer_button.click
+  end
+
+  #@method delete_offer
+  #go to mon compte page.
+  def self.delete_offer
+    identification_page = IdentificationPage.new
+    identification_page.delete_offer_button.click
+  end
+
+  #@method delete_offer
+  #go to mon compte page.
+  def self.click_view_offer
+    identification_page = IdentificationPage.new
+    identification_page.first_offer_saved.click
+  end
 end
 World(IdentificationHelpers)

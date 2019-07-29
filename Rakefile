@@ -27,3 +27,9 @@ task :add_skills_cv_test  do
   init_host_name
   ruby "-S bundle exec cucumber features/tests/add_skills_cv.feature"
 end
+
+desc 'Run emploitic third issue test'
+task :third_issue_test  do
+  init_host_name
+  ruby "-S bundle exec cucumber features/tests/third_issue.feature"
+end
