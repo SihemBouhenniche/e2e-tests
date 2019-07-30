@@ -10,8 +10,9 @@ def init_host_name
   end
 end
 
-desc 'Run add personnal info test'
-task :add_personnal_info_test  do
+
+desc 'Run fill experience test'
+task :fill_experience_test  do
   init_host_name
-  ruby "-S bundle exec cucumber features/tests/add_personnal_info.feature"
+  ruby "-S bundle exec cucumber features/tests/fill_experience.feature"
 end
