@@ -6,7 +6,7 @@ require 'cucumber/rake/task'
 #init host name, in dummy feature the host is google.
 def init_host_name
   if ENV['host'].equal? nil
-    ENV['host'] = 'https://www.google.com'
+    ENV['host'] = 'http://test-emploitic.com'
   end
 end
 

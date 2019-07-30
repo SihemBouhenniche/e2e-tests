@@ -1,12 +1,15 @@
-Feature: Add_Languages_CV
+Feature: Add_languages_CV
 
   Scenario: Add 3 languages to my CV
    Given I am on emploitic identification page
-   Then I can type "sihem.bouhenniche@emploitic.com" in email field
-   Then I can type "31090533" in password field
+   Then I can type "fm_bourouais@esi.dz" in email field
+   Then I can type "123456789" in password field
    When I click on connexion button
-   Then I should see "cv light" page
    When I click on mon compte button
    Then I should see "Mon compte" page
-   When I click on add button
-   Then I can type "Ara" And "Fra" And "Ang" in language field
+   Then I can add "Arabe" language
+   And I can wait "2" seconds
+   And I can add "Chinois" language
+   And I can wait "2" seconds
+   And I can add "Français" language
+   And I can wait "2" seconds

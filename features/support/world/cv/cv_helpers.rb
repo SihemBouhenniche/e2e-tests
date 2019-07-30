@@ -22,5 +22,26 @@ module CvHelpers
     set_skill(skill)
   end
 
+  #@method set_skill(value)
+  #+value+: language to set
+  #fill skill field with given language and click on enter key.
+  def self.set_language(value)
+    TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.find_all(".cv-add-button").at(2).click
+    TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.find_all(".languages .e-input-wrapper input").at(0).set(value)
+    UtilsHelpers.find_all(".languages .e-input-wrapper input").at(0).send_keys "\n"
+    TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.find_all(".languages .e-input-wrapper input").at(0).send_keys "\n"
+    TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.find_all(".save-form-section button").at(0).click
+  end
+
+  #@method set_custom_skill
+  #set custom skill
+  def self.set_custom_language(language)
+    set_language(language)
+  end
+
 end
 World(CvHelpers)
