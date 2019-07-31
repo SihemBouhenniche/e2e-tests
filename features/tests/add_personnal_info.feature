@@ -7,4 +7,3 @@ Feature: Dummy
   Then I click on connexion button
   When I click on mon compte button
   Then I enter my personnal info
-  Then I click on save button

@@ -6,7 +6,7 @@ module PersonnalInfoHelpers
   #@method signin
   #signin into emploitic.
   def self.save_infos
-    UtilsHelpers.find_all("footer button").at(0).click
+    UtilsHelpers.find_all(".save-form-section button").at(0).click
     TimeHelpers.wait_for_ajax(10)
   end
 
@@ -17,8 +17,9 @@ module PersonnalInfoHelpers
     UtilsHelpers.find_all(".cv-edit-button").at(0).click
     set_gender()
     set_birthday()
-    set_region()
     set_phone_number()
+    set_region()
+    save_infos()
   end
 
   def self.set_gender
@@ -28,8 +29,9 @@ module PersonnalInfoHelpers
 
   def self.set_phone_number
     UtilsHelpers.find_all("#cv-phones .e-input-wrapper input").at(0).set("0551234567")
-    UtilsHelpers.find_all(".spaced-l").at(0).click
     TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.find_all("#cv-phones a.add-button").at(0).click
+    TimeHelpers.wait_for_ajax(20)
   end
 
   def self.set_region
