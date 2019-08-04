@@ -31,4 +31,12 @@ class UtilsPage < SitePrism::Page
   def expect_to_have_selector(selector)
     page.has_selector? selector
   end
+
+  def find_by_title(title)
+    page.find('li', text: title)
+  end
+
+  def attach_file(name, fileUrl)
+    page.attach_file(name, fileUrl)
+  end
 end

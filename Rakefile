@@ -6,12 +6,12 @@ require 'cucumber/rake/task'
 #init host name, in dummy feature the host is google.
 def init_host_name
   if ENV['host'].equal? nil
-    ENV['host'] = 'https://www.emploitic.com'
+    ENV['host'] = 'http://test-emploitic.com'
   end
 end
 
 desc 'Run add personnal info test'
-task :add_personnal_info_test  do
+task :apply_for_job_test  do
   init_host_name
-  ruby "-S bundle exec cucumber features/tests/add_personnal_info.feature"
+  ruby "-S bundle exec cucumber features/tests/apply_for_job.feature"
 end

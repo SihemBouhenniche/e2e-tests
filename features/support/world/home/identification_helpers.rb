@@ -32,5 +32,12 @@ module IdentificationHelpers
     identification_page = IdentificationPage.new
     identification_page.my_account_button.click
   end
+
+  #@method display_my_account
+  #go to mon compte page.
+  def self.display_offers
+    identification_page = IdentificationPage.new
+    identification_page.offers_button.click
+  end
 end
 World(IdentificationHelpers)

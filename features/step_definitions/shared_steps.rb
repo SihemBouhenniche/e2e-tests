@@ -21,3 +21,7 @@ end
 When /^I click on mon compte button$/ do
   IdentificationHelpers.display_my_account
 end
+
+When /^I click on offers button$/ do
+  IdentificationHelpers.display_offers
+end

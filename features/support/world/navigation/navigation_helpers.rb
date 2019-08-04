@@ -18,5 +18,11 @@ module NavigationHelpers
     identification_page.load
   end
 
+  def self.load_anonyme_offer_page
+    HostHelpers.set_host
+    anonyme_offer_page = AnonymeOfferPage.new
+    anonyme_offer_page.load
+  end
+
 end
 World(NavigationHelpers)

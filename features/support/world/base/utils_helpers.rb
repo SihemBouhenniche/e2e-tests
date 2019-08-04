@@ -17,6 +17,21 @@ module UtilsHelpers
     utils.find_all(selector)
   end
 
+  #@method find_all(selector)
+  #find all selector
+  def self.find_by_title(title)
+    utils = UtilsPage.new
+    utils.find_by_title(title)
+  end
+
+  #@method find_all(selector)
+  #find all selector
+  def self.attach_file(name, fileUrl)
+    utils = UtilsPage.new
+    utils.attach_file(name, fileUrl)
+  end
+
+
   #@method execute_js(script)
   #execute js script
   def self.execute_js(script)

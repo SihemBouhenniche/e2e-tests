@@ -6,4 +6,5 @@ class IdentificationPage < SitePrism::Page
   element :password_input, '#password-field-5-ww input.span12'
   element :connexion_button, 'div.spaced:nth-child(7) > button:nth-child(1)'
   element :my_account_button, '.item-109 > a:nth-child(1)'
+  element :offers_button, '.item-110 > a:nth-child(1)'
 end
