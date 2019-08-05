@@ -31,12 +31,11 @@ module UtilsHelpers
     utils.attach_file(name, fileUrl)
   end
 
-
-  #@method execute_js(script)
-  #execute js script
-  def self.execute_js(script)
+  #@method find_all(selector)
+  #find all selector
+  def self.fill_in_autocomplete(selector, value)
     utils = UtilsPage.new
-    utils.execute_js script
+    utils.fill_in_autocomplete(selector, value)
   end
 
   #@method evaluate_js(script)
@@ -44,6 +43,13 @@ module UtilsHelpers
   def self.evaluate_js(script)
     utils = UtilsPage.new
     utils.evaluate_js script
+  end
+
+  #@method evaluate_js(script)
+  #evaluate js script and return js return object
+  def self.execute_js(script)
+    utils = UtilsPage.new
+    utils.execute_js script
   end
 
   #@method expect_to_have_selector(selector)

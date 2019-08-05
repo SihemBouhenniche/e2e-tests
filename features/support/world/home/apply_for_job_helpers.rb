@@ -13,10 +13,16 @@ module ApplyForJobHelpers
 
   def self.uploadCv
     UtilsHelpers.attach_file('upload','C:\Users\nabou\Documents\cv-bouhenniche.pdf')
-    TimeHelpers.wait_for_ajax(10)
+    TimeHelpers.wait_for_ajax(100)
   end
 
   def self.fill_infos
+    #region
+    set_region()
+
+    #cv File
+    uploadCv()
+    
     #Je suis un(e)
     UtilsHelpers.find_all("#jform_user_gender_id-ww input").at(0).click
     TimeHelpers.wait_for_ajax(10)
@@ -38,9 +44,6 @@ module ApplyForJobHelpers
     #phone
     UtilsHelpers.find_all("input[placeholder=Téléphone]").at(0).set("0551234567")
     TimeHelpers.wait_for_ajax(10)
-
-    #region
-    set_region()
 
     #last post
     UtilsHelpers.find_all("#jform_expe_title-ww input").at(0).set("Ingénieur")
@@ -67,16 +70,19 @@ module ApplyForJobHelpers
     UtilsHelpers.find_all("#jform_cv_education_level_id-ww ul.autocomplete li").at(0).click
     TimeHelpers.wait_for_ajax(10)
 
-    #cv File
-    uploadCv()
 
-    UtilsHelpers.find_all("#apply-button").at(0).click
-    TimeHelpers.wait_for_ajax(50)
+    UtilsHelpers.find_first("#apply-button").click
+    TimeHelpers.wait_for_dom("#confirmation")
   end
 
   def self.set_region
-    UtilsHelpers.find_all("#jform_user_location-ww input").at(0).set("Alg")
-    UtilsHelpers.find_all("#jform_user_location-ww ul.autocomplete li").at(0).click
+    UtilsHelpers.find_all("#jform_user_location-ww input").at(0).set("Alger")
+    TimeHelpers.wait_for_ajax(10)
+    UtilsHelpers.execute_js("$(document).ready(function() {
+  $('#jform_user_location-ww ul.autocomplete').val('Alger, Algérie').keydown();
+});")
+sleep(3)
+    UtilsHelpers.execute_js %Q{ $('#jform_user_location-ww ul.autocomplete li:contains("Alger, Algérie")').trigger('mouseenter').click(); }
     TimeHelpers.wait_for_ajax(10)
   end
 
